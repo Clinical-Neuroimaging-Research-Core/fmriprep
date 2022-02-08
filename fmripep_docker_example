@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Command to use IF you would like fMRIPrep to also run freesurfer 6
+
+fmriprep-docker /Path/to/rawdata/ /Path/to/derivatives participant --participant-label SUBJECT_ID --fs-license-file /Path/to/Freesufer/license.txt -w /Path/to/scratch
+
+# Command to use IF you are using an existing freesurfer 
+
+fmriprep-docker /Path/to/rawdata/ /Path/to/derivatives participant --participant-label SUBJECT_ID --fs-license-file /Path/to/Freesufer/license.txt --fs-subjects-dir /Path/to/derivatives/freesurfer -w /Path/to/scratch
+
+###################################################################
+
+# Example command with full paths
+
+fmriprep-docker /Volumes/Pegasus/nstb/rawdata/ /Volumes/Pegasus/nstb/derivatives participant --participant-label 7001 --fs-license-file /Applications/freesurfer/7.2.0/license.txt --fs-subjects-dir /Volumes/Pegasus/nstb/derivatives/freesurfer -w /Volumes/Pegasus/nstb/scratch
